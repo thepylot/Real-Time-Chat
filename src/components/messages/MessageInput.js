@@ -89,9 +89,9 @@ export default class MessageInput extends Component {
 					<button
 						disabled = { message.length < 1 }
 						type = "submit"
-						className = "send"
+						className = "btn btn-danger btn--rounded fa fa-paper-plane-o"
 
-					> Send </button>
+					> </button>
 				</form>
 
 			</div>
