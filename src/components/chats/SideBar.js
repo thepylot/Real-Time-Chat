@@ -41,7 +41,7 @@ export default class SideBar extends Component{
 									className={`user ${classNames}`}
 									onClick={ ()=>{ setActiveChat(chat) } }
 									>
-									<div className="user-photo">{user.name[0].toUpperCase()}</div>
+									<div className="user-photo"><img  className="user-photo"src="https://mcn-images.bauersecure.com/upload/219145/images/craig-jones.jpg"/></div>
 									<div className="user-info">
 										<div className="name">{user.name}</div>
 										{lastMessage && <div className="last-message">{lastMessage.message}</div>}

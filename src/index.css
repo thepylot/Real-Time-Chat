@@ -260,3 +260,10 @@ color: #fff;
 .btn-danger .btn-icon{
 	background-color: #e74c3c;
 }
+.user-photo{
+	
+	width: 80px;
+	height: 77px;
+	border-radius: 50%;
+	
+}
