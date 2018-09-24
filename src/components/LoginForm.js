@@ -28,7 +28,7 @@ export default class LoginForm extends Component {
 		socket.emit(VERIFY_USER, nickname, this.setUser)
 	}
 
-	handleChange = (e)=>{
+	handleChange = (e)=>{	
 		this.setState({nickname:e.target.value})
 	}
 
@@ -43,15 +43,16 @@ export default class LoginForm extends Component {
 				<form onSubmit={this.handleSubmit} className="login-form" >
 
 					<label htmlFor="nickname">
-						<h2>What is Your Username?</h2>
+						<h2>Got a nickname?</h2>
 					</label>
 					<input
+					className="form-control"
 						ref={(input)=>{ this.textInput = input }} 
 						type="text"
 						id="nickname"
 						value={nickname}
 						onChange={this.handleChange}
-						placeholder={'BikerName'}
+						placeholder={'Biker'}
 						/>
 						<div className="error">{error ? error:null}</div>
 

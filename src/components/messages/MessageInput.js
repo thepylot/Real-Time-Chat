@@ -41,7 +41,6 @@ export default class MessageInput extends Component {
 	*	Start an interval that checks if the user is typing.
 	*/
 	startCheckingTyping = ()=>{
-		console.log("Typing");
 		this.typingInterval = setInterval(()=>{
 			if((Date.now() - this.lastUpdateTime) > 300){
 				this.setState({isTyping:false})
@@ -55,7 +54,6 @@ export default class MessageInput extends Component {
 	*	Start the interval from checking if the user is typing.
 	*/
 	stopCheckingTyping = ()=>{
-		console.log("Stop Typing");
 		if(this.typingInterval){
 			clearInterval(this.typingInterval)
 			this.props.sendTyping(false)
@@ -89,9 +87,9 @@ export default class MessageInput extends Component {
 					<button
 						disabled = { message.length < 1 }
 						type = "submit"
-						className = "btn btn-danger btn--rounded fa fa-paper-plane-o"
+						className = "send"
 
-					> </button>
+					> Send </button>
 				</form>
 
 			</div>
